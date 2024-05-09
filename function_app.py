@@ -6,6 +6,7 @@ import chinese_calendar as cc
 from datetime import datetime, date, timedelta
 
 # 创建 FunctionApp 实例通常不是必需的，除非您有特殊的配置需求
+app = func.FunctionApp()
 
 @app.route(route="zipcode", methods=['GET'], auth_level=func.AuthLevel.ANONYMOUS)
 def zipcode(req: func.HttpRequest) -> func.HttpResponse:
